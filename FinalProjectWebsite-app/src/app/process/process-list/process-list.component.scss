@@ -1,0 +1,14 @@
+.card:hover{
+  opacity: 0.6;
+}
+
+.card {
+  background-color: #b0b0b0;
+  color: black;
+  padding: 16px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+

@@ -1,0 +1,30 @@
+﻿<h1 align="center">You need to log in to see the items</h1>
+
+<div style="align-content: center; justify-content: center; display: grid">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+  <mat-form-field appearance="standard">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" required placeholder="">
+    <div *ngIf="username.invalid && submitted" class="alert-danger">
+      <div *ngIf="username.errors.required">Username is required</div>
+    </div>
+  </mat-form-field>
+    </div>
+    <div>
+  <mat-form-field appearance="standard">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" required placeholder="">
+    <div *ngIf="password.invalid && submitted" class="alert-danger">
+      <div *ngIf="password.errors.required">Password is required</div>
+    </div>
+  </mat-form-field>
+    </div>
+    <div>
+    <button mat-raised-button class="btn btn-primary" (click)="onSubmit()" >Login</button>
+    <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    <div *ngIf="errormessage" class="alert-danger">{{errormessage}}</div>
+    </div>
+  </form>
+</div>
+

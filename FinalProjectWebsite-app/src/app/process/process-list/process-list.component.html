@@ -1,0 +1,21 @@
+<div *ngIf="processes">
+  <h1 align="center">Processes</h1>
+  <ul style="padding-right: 40px">
+    <mat-list-item *ngFor="let process of processes">
+      <mat-expansion-panel class="card" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title  style="font-weight: bolder">
+            Process: {{process.processName}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <a  style="font-weight: bold">Exceptions, Amount: {{process.errors.length}}</a>
+        <p *ngFor="let item of process.errors">Error type: {{item.errorType}}, Error Detail: {{item.errorDetail}}</p>
+        <button mat-button (click)="openDialog(process.id)">Delete</button>
+      </mat-expansion-panel>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </ul>
+</div>
+<div style="width: 100%; height: 90%; align-items: center; display: flex; justify-content: center"  *ngIf="!processes">
+  <mat-spinner></mat-spinner>
+</div>

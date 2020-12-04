@@ -1,0 +1,15 @@
+<button mat-button routerLink="/errors">Back</button>
+<div class="card-container" *ngIf="error != null">
+  <mat-card class="card-for-error">
+    <mat-card-header>
+      <mat-card-title>{{error.id}}. {{error.errorType}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://miro.medium.com/max/700/1*kFRVUbuoYH57iJlNAclmFQ.jpeg" alt="Photo of a robot">
+    <mat-card-content>
+      <p style="padding-left: 15px">{{error.errorDetail}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div style="width: 100%; height: 90%; align-items: center; display: flex; justify-content: center" *ngIf="error == null">
+  <mat-spinner></mat-spinner>
+</div>
