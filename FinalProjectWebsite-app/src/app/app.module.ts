@@ -7,7 +7,6 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorsDetailsComponent } from './errors/errors-details/errors-details.component';
-import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
@@ -31,7 +30,6 @@ import {ReactiveFormsModule} from "@angular/forms";
     NavbarComponent,
     WelcomeComponent,
     ErrorsDetailsComponent,
-    AboutComponent,
     ProcessListComponent,
     ProcessDetailsComponent,
     DeleteDialogComponent,
