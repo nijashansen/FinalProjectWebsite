@@ -10,8 +10,6 @@ import {map} from "rxjs/operators";
 export class AuthenticationService {
   public isLoggedIn = false;
 
-  urlApi = 'https://finalprojectwebapi.azurewebsites.net/token';
-
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<boolean>{

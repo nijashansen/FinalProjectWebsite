@@ -9,7 +9,9 @@ import {ProcessService} from "../../services/process.service";
 })
 export class DeleteDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<DeleteDialogComponent>, public processService: ProcessService, @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(public dialogRef: MatDialogRef<DeleteDialogComponent>,
+              public processService: ProcessService,
+              @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
   }

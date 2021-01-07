@@ -40,9 +40,4 @@ export class ProcessListComponent implements OnInit {
       }
     );
   }
-
-  getProcessLength(): number {
-    return this.processes.length;
-  }
-
 }
